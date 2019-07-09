@@ -5,7 +5,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   
-  process :resize_to_limit => [3648, 2736]
+  def size_range
+    1..10.megabytes
+  end
   
   def extension_white_list
     %w(jpg jpeg png)

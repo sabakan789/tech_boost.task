@@ -18,8 +18,6 @@ class SessionsController < ApplicationController
     redirect_to root_url, info: 'ログアウトしました'
   end
   
-
-
   private
   def log_in(user)
     session[:user_id] = user.id
@@ -32,7 +30,6 @@ class SessionsController < ApplicationController
   def user_password
     params.require(:session).permit(:password)
   end
-
   
   def log_out
     session.delete(:user_id)

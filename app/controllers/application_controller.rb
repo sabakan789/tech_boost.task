@@ -11,5 +11,5 @@ class ApplicationController < ActionController::Base
   end
   
     include ApplicationHelper
-    helper_method :logged_in?
+    helper_method :current_user, :logged_in?
 end
