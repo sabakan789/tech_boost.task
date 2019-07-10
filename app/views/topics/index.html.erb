@@ -17,10 +17,15 @@
                   <i class="fa fa-heart" aria-hidden="true"></i>
                 <% end %>
               <% end %>  
-             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+              <%= link_to comments_path(topic_id: topic.id) do %>
+                <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+                <% end %>
             <p class="topic-text">
               <%= topic.description %>
             </p>
+            <h3>コメント</h3>
+            
+         </p>
           </div>
         </div>
       </div>
