@@ -15,7 +15,11 @@
               <%= topic.description %>
             </p>
             <h3>コメント</h3>
-            <p><%= @comments %></p>
+              <% topic.comments.each do |comment| %>
+              <p class="topic-text">
+                <%= comment.content %>
+              </p>
+              <% end %>
           </div>
         </div>
       </div>

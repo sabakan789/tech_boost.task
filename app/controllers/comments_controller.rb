@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     # @comment = Comment.new(comment_params)
     @comment = current_user.comments.new(comment_params)
     # @comment.topic_id = params[:topic_id]
-    @comments = @comment.all
+    @comments = @comment.all.find_by(topic_id: topic.id)
        
     if @comment.save
       redirect_to topics_path, success: 'コメントに成功しました'
