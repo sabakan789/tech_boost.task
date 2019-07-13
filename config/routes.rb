@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   delete '/favorites', to: 'favorites#destroy'
   
 
-  get '/comments/:topic_id/new' => 'comments#new', as: 'comments'
+  get '/comments/:topic_id/new', to: 'comments#new', as: 'comments'
   post '/comments/:topic_id/create', to: 'comments#create', as:'comments_create'
 
   # get 'comments/new'
