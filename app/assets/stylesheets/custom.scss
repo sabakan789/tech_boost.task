@@ -16,8 +16,15 @@ h1, h2 {
 
   &:hover {
     color: #fff;
+// 変更箇所
+    box-shadow: 0 0 15px 5px #0ff;
   }
 }
+
+.btn-white:focus {
+  box-shadow: 0 0 15px 5px #fff;
+}
+// 変更箇所
 
 .top-hero-wrapper {
   width: 100vw;
